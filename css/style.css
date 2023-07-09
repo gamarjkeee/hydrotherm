@@ -231,6 +231,14 @@ h6 {
   z-index: 5;
 }
 
+.header__logo picture source {
+  max-width: 100%;
+}
+
+.header__logo picture:nth-child(2) source {
+  display: none;
+}
+
 .header__logo img {
   max-width: 100%;
 }
@@ -1658,6 +1666,16 @@ h6 {
         -ms-flex: 0 0 2.5rem;
             flex: 0 0 2.5rem;
     width: 2.5rem;
+  }
+
+  .header__logo picture source {
+    display: none;
+  }
+
+  .header__logo picture:nth-child(2) source {
+    width: 2.5rem;
+    height: 2.5rem;
+    display: block;
   }
 
   .header__logo img {
