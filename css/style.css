@@ -2,6 +2,49 @@
 
 @charset "UTF-8";
 
+@font-face {
+  font-family: icons;
+  font-display: swap;
+  src: url("../fonts/icons.woff2") format("woff2"), url("../fonts/icons.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+[class*=_icon-]:before {
+  font-family: "icons";
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+[class*=_icon-]:before {
+  display: block;
+}
+
+._icon-fb:before {
+  content: "\e900";
+}
+
+._icon-insta:before {
+  content: "\e90a";
+}
+
+._icon-link:before {
+  content: "\e90b";
+}
+
+._icon-tiktok:before {
+  content: "\e90c";
+}
+
+._icon-youtube:before {
+  content: "\e90d";
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -1068,37 +1111,13 @@ button.swiper-pagination-bullet {
 }
 
 .social__item {
-  width: 2.5rem;
-  height: 2.5rem;
-  position: relative;
+  font-size: 2.5rem;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
-.social__item::after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 50%;
-  left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  width: 0;
-  height: 0;
-  border-radius: 50%;
-  background-color: rgb(242, 110, 33);
-  opacity: 0;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.menu__social .social__item::after {
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-}
-
-.social__item img {
-  max-width: 100%;
+footer .social__item {
+  color: #000;
 }
 
 .header {
@@ -1186,6 +1205,9 @@ button.swiper-pagination-bullet {
 }
 
 .menu__list {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1223,15 +1245,7 @@ button.swiper-pagination-bullet {
 }
 
 .menu__social {
-  position: absolute;
-  bottom: -3.125rem;
-  left: 0;
-  width: 100%;
-  height: 2.5rem;
-  margin-top: 2.5rem;
-  background-color: #fff;
-  border-left: 0.625rem solid rgb(242, 110, 33);
-  border-right: 0.625rem solid rgb(242, 110, 33);
+  justify-self: flex-end;
 }
 
 .icon-menu {
@@ -2439,6 +2453,14 @@ button.swiper-pagination-bullet {
     left: -100%;
     width: 100%;
     height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 3.125rem;
     background-color: rgb(242, 110, 33);
     color: #fff;
     overflow: auto;
@@ -2477,6 +2499,9 @@ button.swiper-pagination-bullet {
     -webkit-box-align: end;
         -ms-flex-align: end;
             align-items: flex-end;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 
   .menu__link {
@@ -3420,10 +3445,8 @@ button.swiper-pagination-bullet {
     background-color: #cf4200;
   }
 
-  .social__item:hover::after {
-    opacity: 1;
-    width: 100%;
-    height: 100%;
+  footer .social__item:hover {
+    color: rgb(242, 110, 33);
   }
 
   .header__action:hover span {
