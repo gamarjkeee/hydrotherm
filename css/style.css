@@ -1896,7 +1896,6 @@ button.swiper-pagination-bullet {
         -ms-transform: translate(0, -50%) rotate(180deg);
             transform: translate(0, -50%) rotate(180deg);
     color: #dbdbdb;
-    font-family: Poppins;
     font-size: 1.125rem;
     line-height: 1.8;
     letter-spacing: 0.0625rem;
@@ -1910,7 +1909,7 @@ button.swiper-pagination-bullet {
     top: 50%;
     left: -3.625rem;
     width: 2.125rem;
-    height: 12.5rem;
+    height: 13.75rem;
     -webkit-writing-mode: vertical-rl;
         -ms-writing-mode: tb-rl;
             writing-mode: vertical-rl;
@@ -1918,7 +1917,6 @@ button.swiper-pagination-bullet {
         -ms-transform: translate(0, -50%) rotate(180deg);
             transform: translate(0, -50%) rotate(180deg);
     color: #dbdbdb;
-    font-family: Poppins;
     font-size: 1.125rem;
     line-height: 1.8;
     letter-spacing: 0.0625rem;
