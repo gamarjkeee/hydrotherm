@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230710113818">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230711113906">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,8 @@
 		<header class="header">
 			<div class="header__container">
 				<a href="index.html" class="header__logo logo">
-					<img src="img/icons/logo.png" alt="Logo Image">
-					<img src="img/icons/logo-small.png" alt="Logo Small Image">
+					<picture><source srcset="img/icons/logo.webp" type="image/webp"><img src="img/icons/logo.png" alt="Logo Image"></picture>
+					<picture><source srcset="img/icons/logo-small.webp" type="image/webp"><img src="img/icons/logo-small.png" alt="Logo Small Image"></picture>
 				</a>
 				<div class="header__menu menu">
 					<nav class="menu__body">
@@ -274,18 +274,18 @@
 					<h3 class="latest-news__title title title--thin">
 						Стати партнером HYDROTHERM
 					</h3>
-					<form class="latest-news__form form" action="#" method="POST">
+					<form class="latest-news__form form" action="sendmail/sendmail.php" enctype="multipart/form-data" method="POST">
 						<div class="form__line">
-							<input type="text" name="form[name]" data-error="Error" placeholder="* Ваше Ім'я" class="form__input" />
+							<input required type="text" name="name" data-error="Error" placeholder="* Ваше Ім'я" class="form__input" />
 						</div>
 						<div class="form__line">
-							<input type="tel" name="form[tel]" data-error="Error" placeholder="* Ваш номер телефону" class="form__input" />
+							<input required type="tel" name="tel" data-error="Error" placeholder="* Ваш номер телефону" class="form__input" />
 						</div>
 						<div class="form__line">
-							<input type="text" name="form[location]" data-error="Error" placeholder="Ваше місто " class="form__input" />
+							<input type="text" name="location" data-error="Error" placeholder="Ваше місто " class="form__input" />
 						</div>
 						<div class="form__line">
-							<input type="text" name="form[email]" data-error="Error" placeholder="Електронна пошта" class="form__input" />
+							<input type="email" name="email" data-error="Error" placeholder="Електронна пошта" class="form__input" />
 						</div>
 						<div class="form__line">
 							<button type="submit" class="form__button">Надіслати</button>
@@ -309,25 +309,26 @@
 					</div>
 					<div class="top-footer__items">
 						<div class="top-footer__item item-top-footer">
-							<div class="item-top-footer__icon">
+							<a href="mailto:info@hydrotherm.com.ua" class="item-top-footer__icon">
 								<img src="img/footer/mail.svg" alt="Mail Icon" />
-							</div>
+							</a>
 							<h4 class="item-top-footer__title">пишіть:</h4>
 							<a href="mailto:info@hydrotherm.com.ua" class="item-top-footer__link">info@hydrotherm.com.ua</a>
 						</div>
+
 						<div class="top-footer__item item-top-footer">
-							<div class="item-top-footer__icon">
-								<img src="img/footer/location.svg" alt="Location Icon" />
-							</div>
-							<h4 class="item-top-footer__title">заходьте:</h4>
-							<a href="https://goo.gl/maps/WqkFSqgjYBRwvb318" class="item-top-footer__link">Ужгород, вул. Коритнянська 35</a>
-						</div>
-						<div class="top-footer__item item-top-footer">
-							<div class="item-top-footer__icon">
+							<a href="tel:0960430504" class="item-top-footer__icon">
 								<img src="img/footer/call.svg" alt="Call Icon" />
-							</div>
+							</a>
 							<h4 class="item-top-footer__title">дзвоніть:</h4>
 							<a href="tel:0960430504" class="item-top-footer__link">096 043 05 04</a>
+						</div>
+						<div class="top-footer__item item-top-footer">
+							<a target="_blank" href="https://goo.gl/maps/WqkFSqgjYBRwvb318" class="item-top-footer__icon">
+								<img src="img/footer/location.svg" alt="Location Icon" />
+							</a>
+							<h4 class="item-top-footer__title">заходьте:</h4>
+							<a href="https://goo.gl/maps/WqkFSqgjYBRwvb318" class="item-top-footer__link">Ужгород, вул. Коритнянська 35</a>
 						</div>
 					</div>
 				</div>
@@ -351,7 +352,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20230710113818"></script>
+	<script src="js/app.min.js?_v=20230711113906"></script>
 </body>
 
 </html>
