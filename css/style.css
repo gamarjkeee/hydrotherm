@@ -1398,7 +1398,7 @@ footer .social__item {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  min-height: 95vh;
+  min-height: calc(100vh - 5.625rem);
 }
 
 .main__content {
@@ -2429,7 +2429,6 @@ footer .social__item {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    min-height: 90vh;
   }
 
   .main__content {
@@ -2618,6 +2617,10 @@ footer .social__item {
 
   .page {
     padding-top: 3.75rem;
+  }
+
+  .main__container {
+    min-height: calc(100vh - 3.75rem);
   }
 
   .image-main {
