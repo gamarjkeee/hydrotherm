@@ -3642,6 +3642,24 @@
             }));
         }
     }), 0);
+    "use strict";
+    const observer = new IntersectionObserver((entries => {
+        console.log(entries);
+        entries.forEach((entry => {
+            if (entry.isIntersecting) document.querySelectorAll(".menu__link").forEach((link => {
+                let id = link.getAttribute("data-goto").replace(".", "");
+                if (id === entry.target.id) {
+                    link.classList.add("active");
+                    console.log("Yes");
+                } else link.classList.remove("active");
+            }));
+        }));
+    }), {
+        threshold: .5
+    });
+    document.querySelectorAll("section").forEach((section => {
+        observer.observe(section);
+    }));
     window["FLS"] = false;
     isWebp();
     menuInit();

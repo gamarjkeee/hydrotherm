@@ -6,7 +6,7 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20230711113906">
+	<link rel="stylesheet" href="css/style.min.css?_v=20230712155211">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,8 +17,8 @@
 		<header class="header">
 			<div class="header__container">
 				<a href="index.html" class="header__logo logo">
-					<img src="img/icons/logo.png" alt="Logo Image">
-					<img src="img/icons/logo-small.png" alt="Logo Small Image">
+					<picture><source srcset="img/icons/logo.webp" type="image/webp"><img src="img/icons/logo.png" alt="Logo Image"></picture>
+					<picture><source srcset="img/icons/logo-small.webp" type="image/webp"><img src="img/icons/logo-small.png" alt="Logo Small Image"></picture>
 				</a>
 				<div class="header__menu menu">
 					<nav class="menu__body">
@@ -62,7 +62,7 @@
 		</header>
 
 		<main class="page">
-			<section class="page__main main">
+			<section id="page" class="page__main main">
 				<div class="main__container">
 					<div class="main__content content-main">
 						<div class="content-main__label label">ТОВ "Гідротерм Україна"</div>
@@ -72,27 +72,36 @@
 						<div class="content-main__text text">
 							офіційний представник групи IVAR в Україні
 						</div>
-						<a href="#" class="content-main__button button">Каталог</a>
+						<a href="#" data-goto-top="60" data-goto=".store" class="content-main__button button">Каталог</a>
 					</div>
 					<div class="main__image image-main">
 						<div class="image-main__slider swiper">
 							<div class="image-main__wrapper swiper-wrapper">
 								<div class="image-main__slide swiper-slide">
-									<picture><source srcset="img/main/swiper/01.webp" type="image/webp"><img src="img/main/swiper/01.jpeg" alt="Main Image"></picture>
+									<picture><source srcset="img/main/swiper/01.webp" type="image/webp"><img src="img/main/swiper/01.png" alt="Main Image"></picture>
 								</div>
 								<div class="image-main__slide swiper-slide">
-									<picture><source srcset="img/main/swiper/02.webp" type="image/webp"><img src="img/main/swiper/02.jpeg" alt="Main Image"></picture>
+									<picture><source srcset="img/main/swiper/02.webp" type="image/webp"><img src="img/main/swiper/02.png" alt="Main Image"></picture>
 								</div>
 								<div class="image-main__slide swiper-slide">
 									<picture><source srcset="img/main/swiper/03.webp" type="image/webp"><img src="img/main/swiper/03.png" alt="Main Image"></picture>
 								</div>
+								<div class="image-main__slide swiper-slide">
+									<picture><source srcset="img/main/swiper/04.webp" type="image/webp"><img src="img/main/swiper/04.png" alt="Main Image"></picture>
+								</div>
+								<div class="image-main__slide swiper-slide">
+									<picture><source srcset="img/main/swiper/05.webp" type="image/webp"><img src="img/main/swiper/05.png" alt="Main Image"></picture>
+								</div>
+								<div class="image-main__slide swiper-slide">
+									<picture><source srcset="img/main/swiper/06.webp" type="image/webp"><img src="img/main/swiper/06.png" alt="Main Image"></picture>
+								</div>
 							</div>
-							<div class="image-main__pagination swiper-pagination"></div>
+							<!-- <div class="image-main__pagination swiper-pagination"></div> -->
 						</div>
 					</div>
 				</div>
 			</section>
-			<section class="page__about-us about-us">
+			<section id="about-us" class="page__about-us about-us">
 				<div class="about-us__container">
 					<div class="about-us__label label">ПРО НАС</div>
 					<h2 class="about-us__title title title--small">
@@ -147,7 +156,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__featured-products featured-products">
+			<section id="about-us" class="page__featured-products featured-products">
 				<div class="featured-products__container">
 					<div class="featured-products__items">
 						<div class="featured-products__item item-featured-products">
@@ -205,7 +214,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="page__store store">
+			<section id="store" class="page__store store">
 				<div class="store__container">
 					<div class="store__label label">ОНЛАЙН МАГАЗИН</div>
 					<h2 class="store__title title title--small">Каталог</h2>
@@ -268,7 +277,7 @@
 					<a target="_blank" href="https://hydrotherm.prom.ua/ua/product_list" class="store__button button">Більше категорій</a>
 				</div>
 			</section>
-			<section class="page__latest-news latest-news">
+			<section id="latest-news" class="page__latest-news latest-news">
 				<div class="latest-news__container">
 					<div class="latest-news__label label label--thin">Партнерська програма</div>
 					<h3 class="latest-news__title title title--thin">
@@ -352,7 +361,7 @@
 		</footer>
 
 	</div>
-	<script src="js/app.min.js?_v=20230711113906"></script>
+	<script src="js/app.min.js?_v=20230712155211"></script>
 </body>
 
 </html>
