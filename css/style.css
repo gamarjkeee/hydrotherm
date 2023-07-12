@@ -2620,7 +2620,7 @@ footer .social__item {
   }
 
   .main__container {
-    min-height: calc(100vh - 3.75rem);
+    min-height: calc(100vh - 5rem);
   }
 
   .image-main {
