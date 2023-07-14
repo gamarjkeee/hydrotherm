@@ -3844,6 +3844,10 @@ footer .social__item {
     color: rgb(242, 110, 33);
   }
 
+  .form__button:hover {
+    background-color: #cf4200;
+  }
+
   .form__button:hover::after {
     top: 0;
   }
